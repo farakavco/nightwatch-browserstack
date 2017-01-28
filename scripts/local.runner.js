@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('../env.js');
 var Nightwatch = require('nightwatch');
 var browserstack = require('browserstack-local');
 var bs_local;
@@ -11,6 +11,7 @@ try {
   console.log("Connecting local");
   Nightwatch.bs_local = bs_local = new browserstack.Local();
   bs_local.start({'key': process.env.BROWSERSTACK_ACCESS_KEY }, function(error) {
+    console.log(error)
     if (error) throw error;
 
     console.log('Connected. Now testing...');

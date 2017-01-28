@@ -1,3 +1,4 @@
+require('../env.js');
 nightwatch_config = {
   src_folders : [ "tests/single" ],
 

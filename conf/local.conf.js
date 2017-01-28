@@ -1,4 +1,5 @@
 var browserstack = require('browserstack-local');
+require('../env.js');
 
 nightwatch_config = {
   src_folders : [ "tests/local" ],
